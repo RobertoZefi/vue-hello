@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <h1 :class="classTitle"> {{ title }} </h1>
+    <img v-bind:src="img" alt="" :class="classImg">
+    
+</div>
+
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!',
+        title: 'Hello',
+        img: './img/Vue.js_Logo_2.svg.png',
+        classTitle: 'title',
+        classImg: 'title-img'
+      }
+    }
+  }).mount('#app')
+</script>
+
+    
+</body>
+</html>
